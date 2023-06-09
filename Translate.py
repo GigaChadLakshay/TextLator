@@ -71,6 +71,6 @@ translate_language = st.selectbox(label="", options=language_names, key=0)
 text = st.text_area("Enter Text To Translate", placeholder="Type Here...")
 translate_button = st.button(label="Translate")
 if translate_button:
-    if text_language != "Select Language" and translate_language != "Select Language":
+    if text_language != "Select Language" and translate_language != "Select Language" and text!="":
         st.markdown("#### Translation:")
         translated_to = st.write(dict(translate(text, language_with_code[translate_language], language_with_code[text_language]))['translations']['translation'])
